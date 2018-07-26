@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require "pry"
 class CashRegister
   attr_accessor :total, :discount, :all_items, :transaction
@@ -30,5 +31,31 @@ class CashRegister
   
   def void_last_transaction
     @total -= @transaction
+=======
+class CashRegister
+  attr_accessor :total 
+  
+  def initialize (discount=0)
+    @total = 0
+   # @total.apply_discount
+  end
+  
+  def add_item(title, price)
+    @total += price
+  end
+  
+  def apply_discount(discount)
+    if discount != 0 
+      total_with_discount = (@total * discount.to_f) + @total
+      puts "After the discount, the total comes to #{total_with_discount}."
+    else 
+      
+  end
+  
+  def items
+  end
+  
+  def void_last_transaction
+>>>>>>> 4843e371db16aa0010808c31d78ab661d124cfb4
   end
 end
